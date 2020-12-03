@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Star Rating Form | TMLBSL</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+  </head>
+    <body>
+        
+        <div class="container">
+            <div class="post">
+                <div class="text">Thanks for rating us!</div>
+                <!-- <div class="edit">EDIT</div> -->
+            </div>
+       
+        <div class="star-widget">
+            <input type="radio" name="rate" id="rate-5" value="5" data-value="5" onclick="ShowHideDiv(5)">
+            <label for="rate-5" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-4" value="4" data-value="4" onclick="ShowHideDiv(4)">
+            <label for="rate-4" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-3" value="3" data-value="3" onclick="ShowHideDiv(3)">
+            <label for="rate-3" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-2" value="2" data-value="2" onclick="ShowHideDiv(2)">
+            <label for="rate-2" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-1" value="1" data-value="1" onclick="ShowHideDiv(1)">
+            <label for="rate-1" class="fas fa-star"></label>
+            <form action="#" method="post" name="frm">
+              <header></header>
+              <div class="textarea1">
+                <textarea cols="30" placeholder="Describe your experience.." name="reason" id="res1" required></textarea>
+              </div>
+              <div class="btn">
+                <button type="submit"  onclick="myFunction()">SUBMIT</button>
+              </div>
+              <script>
+      const btn = document.querySelector("button");
+      const post = document.querySelector(".post");
+      const widget = document.querySelector(".star-widget");
+      const editBtn = document.querySelector(".edit");
+      btn.onclick = ()=>{
+        widget.style.display = "none";
+        post.style.display = "block";
+        editBtn.onclick = ()=>{
+          widget.style.display = "block";
+          post.style.display = "none";
+        }
+        return false;
+      }
+    </script>
+            </form>
+          </div>
+        </div>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- <script> 
+            function displayRadioValue() { 
+                var ele = document.getElementsByName('rate'); 
+                if(ele.checked){
+                        console.log("rating ="+ele.value);
+                        
+                        // document.getElementById("result").innerHTML
+                        //     = "Gender: "+ele[i].value;
+
+                    }
+                
+                
+                  
+                // for(i = 0; i < ele.length; i++) { 
+                //     if(ele[i].checked){
+                //         console.log("rating ="+ele[i].value);
+                        
+                //         // document.getElementById("result").innerHTML
+                //         //     = "Gender: "+ele[i].value;
+
+                //     }
+                    
+                     
+                // } 
+            } 
+        </script>  -->
+        <script>
+            var z;
+            function ShowHideDiv(x) {
+                if(x==1||x==2){
+                    
+                    console.log("abhi"+x);
+                    
+                    // document.getElementsByClassName("textarea1").style.visibility="hidden";
+                    document.getElementById("res1").style.visibility="visible";
+                    
+                    
+                    
+                }
+                else{
+                    // document.getElementsByClassName("textarea1").style.visibility="visible";
+                    document.getElementById("res1").style.visibility="hidden";
+                    console.log("hi");
+                    console.log(x);
+    
+                }
+            
+        }
+        function myFunction() {
+                var z = document.frm.reason.value;
+                // swal('hello'+z);
+                post.style.display = "block";
+                widget.style.display = "none";
+                // console.log(z);
+                
+                
+            }
+            // console.log(z);
+    
+        </script>
+
+
+    </body>
+</html>
