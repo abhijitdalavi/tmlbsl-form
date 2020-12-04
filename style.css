@@ -76,7 +76,7 @@ input#rate-5:checked ~ label{
 }
 #rate-3:checked ~ form header:before{
   white-space: pre-wrap;
-  content: "Neutral 😄 \aThanks for your feedback, Your suggestion with help us improve further";
+  content: "Neutral 😄 \aThanks for your feedback, Your suggestion will help us improve further";
 }
 #rate-4:checked ~ form header:before{
   white-space: pre-wrap;
